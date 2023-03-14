@@ -1,0 +1,52 @@
+#logo {
+    max-width: 8em; /* em er så den er relativ og retter sig efter skærm */
+}
+
+/* navbar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1em;
+    overflow: hidden;
+    background-color: #300;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a, p {
+    font-family: 'Times new roman', sans-serif;
+    font-size: 1.5em;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #100;
+  }
+  
+/* navbar */
+
+body {
+    min-height: 100vh; /* vh står for Viewer Height */
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+}
+
+.bodyText {
+    display: flex;
+    justify-content: center;
+    font-family: 'Times new roman';
+    text-align: center;
+    padding-top: 3%;
+}
