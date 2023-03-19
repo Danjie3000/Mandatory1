@@ -1,8 +1,97 @@
-#logo {
-    max-width: 8em; /* em er så den er relativ og retter sig efter skærm */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
+  --header-height: 1px;
+  --footer-height: 1px;
+}
+
+* {
+    background-color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+.gridContainer {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5fr 1.2fr 0.8fr;
+  grid-template-areas:
+    "nav nav"
+    "main main"
+    "content1 content2"
+    "footer footer";
+  grid-gap: 0.1rem;
 }
 
 /* navbar */
+#logo {
+  max-width: 7em; /* em er så den er relativ og retter sig efter skærm */
+  
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1em;
+    overflow: hidden;
+  }
+  
+  li {
+    text-align: space-between;
+    padding: 0 2em;
+    float: right;
+  }
+
+  li a, p {
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+  }
+  
+  li p:hover:not(.active) {
+    background-color: black;
+    padding: 5px 5px;
+  }
+  
+/* navbar */
+
+main {
+  min-height: calc(100vh - (var(--footer-height) + var(--header-height))); /* vh står for Viewer Height */
+}
+
+#content1 {
+  background: #6fffd2;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content2 {
+  background: #64ffda;
+  grid-area: content2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+
+
+@media only screen and (max-width: 550px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 2.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "main"
+      "content1"
+      "content2"
+      "footer";
+  }
+}
+
+/* navbar 
 ul {
     list-style-type: none;
     margin: 0;
@@ -24,7 +113,6 @@ ul {
   }
 
   li a, p {
-    font-family: 'Times new roman', sans-serif;
     font-size: 1.5em;
   }
   
@@ -32,12 +120,10 @@ ul {
     background-color: #100;
   }
   
-/* navbar */
+ NAV
 
 body {
-    min-height: 100vh; /* vh står for Viewer Height */
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh; /* vh står for Viewer Height 
 }
 main{
     flex: 1;
@@ -46,7 +132,7 @@ main{
 .bodyText {
     display: flex;
     justify-content: center;
-    font-family: 'Times new roman';
     text-align: center;
     padding-top: 3%;
 }
+*/
