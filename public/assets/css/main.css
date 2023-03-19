@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 
+/* Global css */
+
 :root {
   --main-radius: 5px;
   --main-padding: 5px;
@@ -16,123 +18,37 @@
 .gridContainer {
   display: grid;
   height: 100vh;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1.5fr 1.2fr 0.8fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.5fr;
   grid-template-areas:
-    "nav nav"
-    "main main"
-    "content1 content2"
-    "footer footer";
+    "nav"
+    "main"
+    "footer";
   grid-gap: 0.1rem;
 }
 
-/* navbar */
-#logo {
-  max-width: 7em; /* em er så den er relativ og retter sig efter skærm */
-  
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 1em;
-    overflow: hidden;
-  }
-  
-  li {
-    text-align: space-between;
-    padding: 0 2em;
-    float: right;
-  }
-
-  li a, p {
-    font-size: 1.3em;
-    color: white;
-    text-decoration: none;
-  }
-  
-  li p:hover:not(.active) {
-    background-color: black;
-    padding: 5px 5px;
-  }
-  
-/* navbar */
+/* Global css */
 
 main {
   min-height: calc(100vh - (var(--footer-height) + var(--header-height))); /* vh står for Viewer Height */
 }
 
-#content1 {
-  background: #6fffd2;
-  grid-area: content1;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
+.bodyTextTitle {
+  text-align: center;
 }
 
-#content2 {
-  background: #64ffda;
-  grid-area: content2;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
+.bodyText {
+  font-size: 1.5em;
+  padding: 1em 10em 10em;
 }
-
-
 
 @media only screen and (max-width: 550px) {
   .gridContainer {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 2.2fr 1.2fr 1.2fr 1fr;
+    grid-template-rows: 1fr 2.2fr 1fr;
     grid-template-areas:
       "nav"
       "main"
-      "content1"
-      "content2"
       "footer";
   }
 }
-
-/* navbar 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 1em;
-    overflow: hidden;
-    background-color: #300;
-  }
-  
-  li {
-    float: right;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-
-  li a, p {
-    font-size: 1.5em;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: #100;
-  }
-  
- NAV
-
-body {
-    min-height: 100vh; /* vh står for Viewer Height 
-}
-main{
-    flex: 1;
-}
-
-.bodyText {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-top: 3%;
-}
-*/
