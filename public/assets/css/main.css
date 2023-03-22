@@ -52,3 +52,19 @@ main {
       "footer";
   }
 }
+
+.installNode, .CRUDimage, .VariablesDataType, .callBack {
+  display: block;
+  margin-top: -15rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50rem;
+}
+
+.callBack {
+  display: block;
+  margin-top: -15rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30rem;
+}
