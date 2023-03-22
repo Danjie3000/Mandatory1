@@ -4,7 +4,7 @@ import fs from "fs";
 function renderPage(page, config={}) {
     const navbar = fs.readFileSync("./public/components/navbar/navbar.html").toString()
                 .replace("$TAB_TITLE", config.tabTitle || "Danjie") // If tabTitle is undefined, use "Danjie" as default. Efter || vil der være Danjie som defualt.
-                .replace("$CSS_LINK", config.cssLink || "");
+                
     const footer = fs.readFileSync("./public/components/footer/footer.html").toString();
     
     return navbar + page + footer;
