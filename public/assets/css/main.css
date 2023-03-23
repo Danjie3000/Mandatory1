@@ -54,17 +54,18 @@ main {
 }
 
 .installNode, .CRUDimage, .VariablesDataType, .callBack, .MFR,
-.static {
+.static, .render, .render2 {
   display: block;
-  margin-top: -15rem;
+  margin-top: -13rem;
   margin-left: auto;
   margin-right: auto;
   width: 50rem;
 }
 
-.callBack, .packageJSON, .sendingDataGET, .fetch, .time {
+.callBack, .packageJSON, .sendingDataGET, .fetch, .time,
+.countdown, .importExport, .typeModule, .structuring {
   display: block;
-  margin-top: -15rem;
+  margin-top: -13rem;
   margin-left: auto;
   margin-right: auto;
   width: 30rem;

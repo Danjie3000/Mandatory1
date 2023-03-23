@@ -1,9 +1,8 @@
 import fs from "fs";
 
-// Components
 function renderPage(page, config={}) {
     const navbar = fs.readFileSync("./public/components/navbar/navbar.html").toString()
-                .replace("$TAB_TITLE", config.tabTitle || "Danjie") // If tabTitle is undefined, use "Danjie" as default. Efter || vil der være Danjie som defualt.
+                .replace("$TAB_TITLE", config.tabTitle || "Danjie")
                 
     const footer = fs.readFileSync("./public/components/footer/footer.html").toString();
     

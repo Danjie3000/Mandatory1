@@ -4,24 +4,22 @@
   }
       /* Ret med flexbox */
   .navContainer {
-      list-style-type: none;
-      margin: 0;
-      padding: 0.5rem;
-      overflow: hidden;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
     .navbtn {
-      padding: 0.2rem;
-      font-size: 2rem;
-      float: right;
+      display: flex;
+      flex-direction: row, right;
     }
 
     .btn {
       text-decoration: none;
-      padding: 2rem;
-      font-size: 0.8em;
+      padding: 1.25rem;
       position: relative;
-      color: azure;
+      margin: 32px;
     }
 
     .btnClick::after, .btnClick::before {
