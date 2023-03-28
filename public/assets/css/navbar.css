@@ -2,60 +2,28 @@
     max-width: 7em; /* em er så den er relativ og retter sig efter skærm */
     
   }
-      /* Ret med flexbox */
-  .navContainer {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+
+.navbtns {
+  list-style-type: none;
+  margin: 0;
+  padding: 1em;
+  overflow: hidden;
+}
     
-    .navbtn {
-      display: flex;
-      flex-direction: row, right;
-    }
+.btn {
+  text-align: space-between;
+  font-size: 1em;
+  padding: 0 2em;
+  float: right;
+}
 
-    .btn {
-      text-decoration: none;
-      padding: 1.25rem;
-      position: relative;
-      margin: 32px;
-    }
-
-    .btnClick::after, .btnClick::before {
-      border: 3px solid azure;
-      content: "";
-      position: absolute;
-      width: calc(100% - 6px);
-      height: calc(100% - 6px);
-      left: 0;
-      bottom: 0;
-      z-index: -1;
-      transition: transform 0.3s ease;
-      }
-
-    /*
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 1em;
-      overflow: hidden;
-    }
+.btn a, p {
+  font-size: 1.3em;
+  color: white;
+  text-decoration: none;
+}
     
-    li {
-      text-align: space-between;
-      padding: 0 2em;
-      float: right;
-    }
-
-    li a, p {
-      font-size: 1.3em;
-      color: white;
-      text-decoration: none;
-    }
-    
-    li p:hover:not(.active) {
-      background-color: black;
-      padding: 5px 5px;
-    }
-    */
+.btn p:hover {
+  background-color: black;
+  padding: 5px 5px;
+}
