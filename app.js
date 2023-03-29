@@ -70,6 +70,12 @@ const loginPage = templateEngine.renderPage(login, {
 tabTitle : "Rock'n'Roll",
 });
 
+// Page Maker.
+const pagerMaker = templateEngine.readPage('./public/pages/login/pagerMaker.html');
+const pagerMakerPage = templateEngine.renderPage(pagerMaker, {
+tabTitle : "Rock'n'Roll",
+});
+
 app.get('/', (req, res) => {
     res.send(frontpagePage);
 });
@@ -110,6 +116,10 @@ app.get('/login', (req, res) => {
     res.send(loginPage);
 });
 
+app.get('/pagerMaker', (req, res) => {
+    res.send(pagerMakerPage);
+});
+
 // API
 
 app.post("/api/contact", (req, res) => {
@@ -118,6 +128,11 @@ app.post("/api/contact", (req, res) => {
 });
 
 app.post("/api/login", (req, res) => {
+    console.log(req.body);
+    res.redirect("/pagerMaker");
+});
+
+app.post("/api/pagerMaker", (req, res) => {
     console.log(req.body);
     res.redirect("/");
 });
