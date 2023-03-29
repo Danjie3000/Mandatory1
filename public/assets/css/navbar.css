@@ -1,29 +1,23 @@
+
 #logo {
-    max-width: 7em; /* em er så den er relativ og retter sig efter skærm */
-    
-  }
+  max-width: 7em; /* em er så den er relativ og retter sig efter skærm */
+}
 
 .navbtns {
-  list-style-type: none;
-  margin: 0;
-  padding: 1em;
-  overflow: hidden;
+list-style-type: none;
+margin: 0;
+padding: 1em;
+overflow: hidden;
 }
-    
+  
 .btn {
-  text-align: space-between;
-  font-size: 1em;
-  padding: 0 2em;
-  float: right;
+text-align: space-between;
+padding: 0 2em;
+float: right;
 }
 
 .btn a, p {
-  font-size: 1.3em;
-  color: white;
-  text-decoration: none;
-}
-    
-.btn p:hover {
-  background-color: black;
-  padding: 5px 5px;
+font-size: 1.4em;
+color: white;
+text-decoration: none;
 }

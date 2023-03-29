@@ -1,0 +1,22 @@
+
+<form class="box" action="/api/login" method="POST">
+
+    <h1>- Login -</h1>
+
+    <input type="text" name="" placeholder="Username" id="username">
+    <input type="password" name="" placeholder="Password" id="password">
+    <input type="submit" name="" value="Login" onclick="validate()">
+</form>
+
+<script>
+    function validate() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username == "admin" && password == "admin") {
+            alert("Login successfully");
+            return false;
+        } else {
+            alert("Invalid username/password");
+        }
+    }
+</script>

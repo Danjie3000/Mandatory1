@@ -12,7 +12,7 @@
 <div class = "bodyText">
     <p> 
         Like we learned last week, clean code and following code conventions is a good idea for several reasons.</br>
-        Therefor, there is a lot of ways to do it. The one we looked at this week was ESLint. </p>
+        Therefor, there is a lot of ways to do it. The one we looked at this week was ESLint. </br>
         ESLint is a popular JavaScript linter that helps enforce strict code conventions and clean code practices in a project.
         Strict mode is a way of enabling a stricter version of JavaScript that helps prevent common coding mistakes and improves code quality. </br>
         ESLint can be used to enforce this strict mode in a project by adding {"rules": {"strict": ["error", "global"]}} to the .eslintrc.json file.
@@ -37,7 +37,7 @@
     <p> 
         Where callbacks really shine are in asynchronous functions. This is where one function has to wait for another function. </br>
         Using callback functions allows JavaScript code to be written in a more modular and reusable way, as different functions can be written to handle different types of operations,</br> 
-        and then passed in as callbacks to other functions that perform those operations. </p>
+        and then passed in as callbacks to other functions that perform those operations. </br>
         When a function is called with a callback function as an argument, it means that the function will not block the program execution, but instead it will return immediately, and the callback function will be executed once the operation is complete.
     </p>
 </div> 
@@ -51,7 +51,7 @@
     <p> 
         "package.json" is a configuration file in Node.js projects that contains important information about the project, such as its name, version, dependencies, and scripts. 
         It is a key file in Node.js projects that allows developers to manage dependencies and configure build processes in a standardized and automated way. </br>
-        The package.json file is located in the root directory of a Node.js project and is typically created using the npm init command. It can be manually edited as well to add dependencies or scripts to the project. </p>
+        The package.json file is located in the root directory of a Node.js project and is typically created using the npm init command. It can be manually edited as well to add dependencies or scripts to the project. </br>
         The dependencies section of the package.json file lists all of the packages that the project depends on with the version numbers as well. When the project is built, these packages are automatically installed by npm. </br>
     </p>
 </div> 
@@ -62,7 +62,7 @@
     <p> 
         As you can see in the picture above, the package.json file contains dependencies I am using in my project. </br>
         The dependency I will look closer at in this section is Express. Express is a web application framework for Node.js. </br>
-        It is designed for building web applications and APIs. </p>
+        It is designed for building web applications and APIs. </br>
         Express allows developers to create web applications using a minimalist approach, with a focus on simplicity, flexibility, and scalability.</br>
         It also offers a wide range of plugins and extensions that can be used to add more functionality to the application, including support for authentication, database integration, and real-time communication.
 
@@ -88,7 +88,7 @@
     <p> 
         The res.sendFile() function transfers the file at the given path and it sets the Content-Type response HTTP header field based on the filename extension. </br>
         "__dirname" is a special variable in Node.js that contains the path of the directory where the current JavaScript file is located. </br>
-        It is a built-in global object in Node.js and is commonly used in Node.js applications to specify file paths relative to the current directory. </p>
+        It is a built-in global object in Node.js and is commonly used in Node.js applications to specify file paths relative to the current directory. </br>
         As seen on the picture, theres also a API. This is a way to send data to the server. </br>
         The data can be hardcoded or edited in the page and the res.send() function sends the HTTP response. The argument of the function is the data to be sent.
     </p>

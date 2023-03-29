@@ -64,6 +64,12 @@ const contactPage = templateEngine.renderPage(contact, {
 tabTitle : "Rock'n'Roll",
 });
 
+// login.
+const login = templateEngine.readPage('./public/pages/login/login.html');
+const loginPage = templateEngine.renderPage(login, {
+tabTitle : "Rock'n'Roll",
+});
+
 app.get('/', (req, res) => {
     res.send(frontpagePage);
 });
@@ -100,9 +106,18 @@ app.get('/contact', (req, res) => {
     res.send(contactPage);
 }); 
 
+app.get('/login', (req, res) => {
+    res.send(loginPage);
+});
+
 // API
 
 app.post("/api/contact", (req, res) => {
+    console.log(req.body);
+    res.redirect("/");
+});
+
+app.post("/api/login", (req, res) => {
     console.log(req.body);
     res.redirect("/");
 });

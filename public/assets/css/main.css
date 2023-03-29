@@ -12,7 +12,6 @@
 * {
     background-color: black;
     font-family: 'Source Sans Pro', sans-serif;
-    color: white;
 }
 
 .gridContainer {
@@ -34,11 +33,12 @@ main {
 }
 
 .bodyTextTitle {
+  font-size: 1.5em;
   text-align: center;
 }
 
 .bodyText {
-  font-size: 1.5em;
+  font-size: 1em;
   padding: 1em 10em 10em;
 }
 
@@ -56,7 +56,7 @@ main {
 .installNode, .CRUDimage, .VariablesDataType, .callBack, .MFR,
 .static, .render, .render2 {
   display: block;
-  margin-top: -13rem;
+  margin-top: -10rem;
   margin-left: auto;
   margin-right: auto;
   width: 50rem;
@@ -65,7 +65,7 @@ main {
 .callBack, .packageJSON, .sendingDataGET, .fetch, .time,
 .countdown, .importExport, .typeModule, .structuring {
   display: block;
-  margin-top: -13rem;
+  margin-top: -10rem;
   margin-left: auto;
   margin-right: auto;
   width: 30rem;
