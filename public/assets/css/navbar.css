@@ -1,6 +1,6 @@
 
 #logo {
-  max-width: 7em; /* em er så den er relativ og retter sig efter skærm */
+  max-width: 7em;
 }
 
 .navbtns {
@@ -14,10 +14,15 @@ overflow: hidden;
 text-align: space-between;
 padding: 0 2em;
 float: right;
+border: none;
 }
 
-.btn a, p {
-font-size: 1.4em;
-color: white;
+.btn a {
+font-size: 1.9em;
+color: azure;
 text-decoration: none;
+}
+
+.btn a:hover {
+color: orangered;
 }

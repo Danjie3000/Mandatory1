@@ -29,16 +29,17 @@
 /* Global css */
 
 main {
-  min-height: calc(100vh - (var(--footer-height) + var(--header-height))); /* vh står for Viewer Height */
+  min-height: calc(100vh - (var(--footer-height) + var(--header-height)));
 }
 
 .bodyTextTitle {
   font-size: 1.5em;
   text-align: center;
+  color: firebrick
 }
 
 .bodyText {
-  font-size: 1em;
+  font-size: 1.5em;
   padding: 1em 10em;
 }
 
