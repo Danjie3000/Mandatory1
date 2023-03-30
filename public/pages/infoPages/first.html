@@ -12,8 +12,8 @@
 <div class = "bodyText">
     <p> 
         Like we learned last week, clean code and following code conventions is a good idea for several reasons.</br>
-        Therefor, there is a lot of ways to do it. The one we looked at this week was ESLint. </br>
-        ESLint is a popular JavaScript linter that helps enforce strict code conventions and clean code practices in a project.
+        It is therefor a lot of ways to do it. The one we looked at this week was ESLint. </br>
+        ESLint is a linter that helps enforce strict code conventions and clean code practices in a project.
         Strict mode is a way of enabling a stricter version of JavaScript that helps prevent common coding mistakes and improves code quality. </br>
         ESLint can be used to enforce this strict mode in a project by adding {"rules": {"strict": ["error", "global"]}} to the .eslintrc.json file.
     </p>
@@ -35,7 +35,7 @@
 
 <div class = "bodyText">
     <p> 
-        Where callbacks really shine are in asynchronous functions. This is where one function has to wait for another function. </br>
+        Where callbacks are really awesome, is in asynchronous functions. This is where one function has to wait for another function. </br>
         Using callback functions allows JavaScript code to be written in a more modular and reusable way, as different functions can be written to handle different types of operations,</br> 
         and then passed in as callbacks to other functions that perform those operations. </br>
         When a function is called with a callback function as an argument, it means that the function will not block the program execution, but instead it will return immediately, and the callback function will be executed once the operation is complete.
@@ -82,7 +82,19 @@
     </p>
 </div> 
                                         
-<img src="assets/images/sendingDataGET.jpg" alt="sendingData" class="sendingDataGET">
+<div class = "bodyCode">
+    <pre>
+        <code>
+            app.get("/tanks", (req, res) => {
+                res.sendFile(__dirname + "/public/tanks/tanks.html");
+            });
+            
+            app.get("/api/tanks", (req, res) => {
+                res.send({ data: getTanks() });
+            });
+        </code>
+    </pre>
+</div>
 
 <div class = "bodyText">
     <p> 

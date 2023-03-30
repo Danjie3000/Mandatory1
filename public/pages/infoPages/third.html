@@ -16,7 +16,19 @@
     </p>
 </div>
 
-<img src="assets/images/time.jpg" alt="time" class="time">
+<div class = "bodyCode">
+    <pre>
+        <code>
+            app.get('/time/time', (req, res) => {
+                res.send({
+                    timeUTC: new Date(),
+                    timeLocal: Date(),
+                    unixTimestamp: Date.now()
+                });
+            }); 
+        </code>
+    </pre>
+</div>
 
 <div class = "bodyText">
     <p> 
@@ -24,7 +36,56 @@
     </p>
 </div> 
 
-<img src="assets/images/countdown.jpg" alt="countdown" class="countdown">
+<div class = "bodyCode">
+    <pre>
+        <code>
+    const timeStampBtn = document.getElementById('time-stamp-btn');
+    const clickedBtn = document.getElementById('clicked-btn');
+    const clickedTxt = document.getElementById('clicked-txt');
+    const dateTime = document.getElementById('datetime-p')
+    const countDownDate = new Date("April 2, 2023 00:00:00").getTime();
+    
+    clickedBtn.addEventListener('click', async(e) => {
+        await fetch('/api/clicked', {
+            method: 'PUT',
+        });
+        displayClicked();
+    });
+    
+    displayClicked();
+    
+    async function displayClicked() {
+        const data = await fetch('/api/clicked');
+        const numberOfClicks = await data.json();
+        clickedTxt.innerText = numberOfClicks.data;
+    };
+    
+    timeStampBtn.addEventListener('click', async(e) => {
+        const data = await fetch('/api/timestamp', {
+            method: 'POST'
+        });
+    });
+    
+    const date = new Date();
+    document.getElementById('datetime-p').innerHTML = date;
+
+    const x = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("countdown-p").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown-p").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+        </code>
+    </pre>
+</div>
 
 <div class = "bodyText">
     <p> 

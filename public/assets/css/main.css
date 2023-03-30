@@ -39,7 +39,12 @@ main {
 
 .bodyText {
   font-size: 1em;
-  padding: 1em 10em 10em;
+  padding: 1em 10em;
+}
+
+.bodyCode {
+  font-size: 1.3em;
+  margin-left: 10em;
 }
 
 @media only screen and (max-width: 550px) {
@@ -53,10 +58,11 @@ main {
   }
 }
 
+ /* Images. */
+
 .installNode, .CRUDimage, .VariablesDataType, .callBack, .MFR,
 .static, .render, .render2 {
   display: block;
-  margin-top: -10rem;
   margin-left: auto;
   margin-right: auto;
   width: 50rem;
@@ -65,7 +71,6 @@ main {
 .callBack, .packageJSON, .sendingDataGET, .fetch, .time,
 .countdown, .importExport, .typeModule, .structuring {
   display: block;
-  margin-top: -10rem;
   margin-left: auto;
   margin-right: auto;
   width: 30rem;

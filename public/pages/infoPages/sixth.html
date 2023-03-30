@@ -31,13 +31,37 @@
     </p>
 </div>
 
-<img src="assets/images/render.jpg" alt="render" class="render">
+<div class = "bodyCode">
+<pre>
+    <code>
+        function renderPage(page, config={}) {
+            const navbar = fs.readFileSync("./public/components/navbar/navbar.html").toString()
+                        .replace("$TAB_TITLE", config.tabTitle || "Danjie")
+                        
+            const footer = fs.readFileSync("./public/components/footer/footer.html").toString();
+            
+            return navbar + page + footer;
+        }
+    </code>
+</pre>
+</div>
 
 <div class = "bodyText">
     <p> 
-        That is what I am using my template engine for. As seen on the picture above. </br>
+        That is what I am using my template engine for. As seen on the code above. </br>
         And calling it like shown below.
     </p>
 </div> 
 
-<img src="assets/images/render2.jpg" alt="render2" class="render2">
+<div class = "bodyCode">
+    <pre>
+        <code>
+            import templateEngine from "./util/templateEngine.js";
+
+            const frontpage = templateEngine.readPage('./public/pages/frontpage/frontpage.html');
+            const frontpagePage = templateEngine.renderPage(frontpage, {
+            tabTitle : "Rock'n'Roll",
+            });
+        </code>
+    </pre>
+</div>

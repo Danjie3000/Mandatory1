@@ -1,4 +1,4 @@
-import fs from "fs";
+import fs from "fs"; // This is an IMPORT!
 
 function renderPage(page, config={}) {
     const navbar = fs.readFileSync("./public/components/navbar/navbar.html").toString()
@@ -13,7 +13,7 @@ function readPage(pagePath) {
     return fs.readFileSync(pagePath).toString();
 }
 
-export default {
+export default { // This is an EXPORT!
     renderPage,
     readPage,
 };
