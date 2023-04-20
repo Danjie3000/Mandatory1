@@ -57,3 +57,5 @@ const oldDudes = dudes.filter(dudes => {
 const totalAge = dudes.reduce((total, dudes) => { // With reduce you can return anything. 
     return total + dudes.age; // It's normally used for numbers and it doesn't even have to be an array.
 }, 0); // 0 here is because we want to start from 0 in the array, this means it starts from Danjie. 
+
+
